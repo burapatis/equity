@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ตารางถอดรหัสศัพท์ · Equity Terminology Decoder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;600;700&family=Sarabun:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f6f2;
+    --card:#ffffff;
+    --ink:#14243f;
+    --ink-soft:#43506a;
+    --ink-faint:#8a91a1;
+    --slip:#b45309;
+    --slip-bg:#fbf0e0;
+    --slip-line:#e7c79a;
+    --stable:#0e7361;
+    --stable-bg:#e3f1ec;
+    --stable-line:#a9d5c8;
+    --gold:#8a6d1c;
+    --rule:#d7dad1;
+    --rule-soft:#e6e8e1;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--paper); }
+  body{
+    font-family:"Sarabun",system-ui,sans-serif;
+    color:var(--ink);
+    line-height:1.42;
+    -webkit-font-smoothing:antialiased;
+    padding:22px 16px 40px;
+  }
+  .sheet{
+    width:210mm;
+    max-width:100%;
+    min-height:297mm;
+    margin:0 auto;
+    background:var(--card);
+    padding:15mm 14mm 12mm;
+    box-shadow:0 2px 24px rgba(20,36,63,.10);
+    border:1px solid var(--rule);
+  }
+
+  /* ---------- Header ---------- */
+  .masthead{ display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:2.5px solid var(--ink); padding-bottom:9px; }
+  .eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:8.5px; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--gold); font-weight:600; }
+  h1{ font-family:"Noto Serif Thai",serif; font-weight:700; font-size:23px; color:var(--ink);
+    line-height:1.12; margin-top:3px; letter-spacing:-.005em; }
+  h1 .en{ font-family:"IBM Plex Mono",monospace; font-weight:500; font-size:12.5px;
+    color:var(--ink-soft); letter-spacing:.02em; }
+  .masthead .who{ text-align:right; font-size:8.5px; color:var(--ink-faint); line-height:1.5;
+    font-family:"IBM Plex Mono",monospace; letter-spacing:.02em; padding-bottom:2px; }
+  .lede{ font-size:11px; color:var(--ink-soft); margin-top:8px; max-width:62ch; }
+  .lede b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- Legend ---------- */
+  .legend{ display:flex; gap:14px; margin-top:11px; }
+  .flag{ display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:600;
+    padding:4px 10px; border-radius:2px; }
+  .flag .g{ font-family:"IBM Plex Mono",monospace; font-weight:700; }
+  .flag.stable{ background:var(--stable-bg); color:var(--stable); border:1px solid var(--stable-line); }
+  .flag.slip{ background:var(--slip-bg); color:var(--slip); border:1px solid var(--slip-line); }
+  .flag small{ font-weight:500; opacity:.9; }
+
+  /* ---------- Section label ---------- */
+  .seclabel{ font-family:"IBM Plex Mono",monospace; font-size:8.5px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--ink-faint); font-weight:600;
+    margin:16px 0 7px; display:flex; align-items:center; gap:9px; }
+  .seclabel::after{ content:""; flex:1; height:1px; background:var(--rule); }
+
+  /* ---------- Main decoder table ---------- */
+  table{ width:100%; border-collapse:collapse; }
+  .decoder th{ font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-faint); font-weight:600; text-align:left;
+    padding:0 8px 5px; border-bottom:1.5px solid var(--ink); }
+  .decoder td{ padding:8px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top;
+    font-size:10.5px; color:var(--ink-soft); }
+  .decoder tr:last-child td{ border-bottom:none; }
+  .code{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:9.5px;
+    color:var(--ink); background:#eef0ea; padding:2px 6px; border-radius:2px;
+    letter-spacing:.02em; white-space:nowrap; display:inline-block; }
+  .th-term{ font-family:"Noto Serif Thai",serif; font-size:13.5px; font-weight:600; color:var(--ink);
+    line-height:1.3; }
+  .th-alt{ font-size:9.5px; color:var(--ink-faint); font-family:"Sarabun"; }
+  .chip{ font-size:8px; font-weight:700; padding:1px 5px; border-radius:2px; margin-left:2px;
+    font-family:"IBM Plex Mono",monospace; vertical-align:middle; }
+  .chip.s{ background:var(--stable-bg); color:var(--stable); border:1px solid var(--stable-line); }
+  .chip.w{ background:var(--slip-bg); color:var(--slip); border:1px solid var(--slip-line); }
+  .rule-cell b{ color:var(--ink); font-weight:600; }
+  .test{ color:var(--ink); }
+  .test .q{ font-style:normal; }
+  .arrow{ color:var(--gold); font-weight:700; }
+
+  .row-problem td{ background:#fafbf7; }
+
+  /* ---------- Spotlight (the trap) ---------- */
+  .spot{ margin-top:6px; border:1.5px solid var(--slip-line); border-radius:3px; overflow:hidden; }
+  .spot-head{ background:var(--slip-bg); color:var(--slip); font-weight:700; font-size:10.5px;
+    padding:7px 11px; display:flex; align-items:center; gap:8px;
+    border-bottom:1px solid var(--slip-line); }
+  .spot-head .big{ font-family:"Noto Serif Thai",serif; font-size:13px; }
+  .spot table td{ font-size:10px; padding:7px 11px; border-bottom:1px solid var(--rule-soft);
+    color:var(--ink-soft); vertical-align:top; }
+  .spot table tr:last-child td{ border-bottom:none; }
+  .src{ font-weight:600; color:var(--ink); white-space:nowrap; }
+  .src .mono{ font-family:"IBM Plex Mono",monospace; font-size:8px; color:var(--ink-faint);
+    display:block; font-weight:500; letter-spacing:.03em; }
+  .verdict{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:9.5px; white-space:nowrap; }
+  .v-eq{ color:var(--ink-soft); }
+  .v-eqty{ color:var(--slip); }
+  .quo{ font-family:"Noto Serif Thai",serif; color:var(--ink); }
+
+  /* ---------- Footer: decode rule + safe words ---------- */
+  .foot{ display:grid; grid-template-columns:1.55fr 1fr; gap:14px; margin-top:16px; }
+  .rulebox{ border:1px solid var(--rule); border-radius:3px; padding:10px 12px; }
+  .rulebox h3, .safebox h3{ font-family:"IBM Plex Mono",monospace; font-size:8.5px;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); font-weight:600;
+    margin-bottom:8px; }
+  .step{ display:flex; gap:9px; margin-bottom:8px; font-size:10px; color:var(--ink-soft); }
+  .step:last-child{ margin-bottom:0; }
+  .step .n{ font-family:"IBM Plex Mono",monospace; font-weight:700; font-size:10px; color:#fff;
+    background:var(--ink); width:17px; height:17px; border-radius:50%; flex:none;
+    display:flex; align-items:center; justify-content:center; }
+  .step b{ color:var(--ink); font-weight:600; }
+  .kw{ font-family:"Noto Serif Thai",serif; font-weight:600; color:var(--ink); }
+  .eq-tag{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:9px; }
+  .tag-eq{ color:var(--ink-soft); } .tag-eqty{ color:var(--slip); }
+
+  .safebox{ background:var(--stable-bg); border:1px solid var(--stable-line); border-radius:3px;
+    padding:10px 12px; }
+  .safebox h3{ color:var(--stable); }
+  .safe-item{ font-size:10px; margin-bottom:8px; color:var(--ink-soft); }
+  .safe-item:last-child{ margin-bottom:0; }
+  .safe-item .kw{ color:var(--stable); }
+  .safe-item .mono{ font-family:"IBM Plex Mono",monospace; font-size:9px; color:var(--stable);
+    font-weight:600; }
+
+  .colophon{ margin-top:13px; padding-top:8px; border-top:1px solid var(--rule);
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:8px; color:var(--ink-faint); font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.02em; }
+
+  /* ---------- Print ---------- */
+  @page{ size:A4; margin:0; }
+  @media print{
+    body{ padding:0; background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .sheet{ box-shadow:none; border:none; width:210mm; min-height:297mm; margin:0;
+      padding:13mm 13mm 10mm; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HEADER -->
+  <div class="masthead">
+    <div>
+      <div class="eyebrow">Reference Card · การ์ดอ้างอิงหน้าเดียว</div>
+      <h1>ตารางถอดรหัสศัพท์ความเสมอภาคทางการศึกษา<br><span class="en">Equity Terminology Decoder · TH ⇄ EN</span></h1>
+    </div>
+    <div class="who">
+      สำหรับผู้กำหนดนโยบาย<br>นักวิจัย · ผู้นำการศึกษา<br>ใช้อ่านเอกสารไทยฉบับใดก็ได้
+    </div>
+  </div>
+
+  <p class="lede">คำ <b>“เสมอภาค”</b> และ <b>“เท่าเทียม”</b> ในภาษาไทย <b>ไม่มีการบัญญัติที่ตรงกัน</b> — เอกสารทางการแต่ละฉบับใช้แทน <span class="eq-tag tag-eq">Equality</span> หรือ <span class="eq-tag tag-eqty">Equity</span> สลับกัน การ์ดนี้ช่วยระบุว่าคำที่คุณเห็น “หมายถึงอะไรกันแน่” โดยยึด <b>กฎการกระจายทรัพยากร</b> ไม่ใช่ตัวคำ</p>
+
+  <div class="legend">
+    <span class="flag stable"><span class="g">🔒</span> คำนิ่ง <small>— ความหมายคงที่ ใช้/อ่านได้เลย</small></span>
+    <span class="flag slip"><span class="g">⚠</span> คำลื่น <small>— ความหมายเปลี่ยนตามแหล่ง ต้องตรวจทุกครั้ง</small></span>
+  </div>
+
+  <!-- MAIN DECODER -->
+  <div class="seclabel">แผงถอดรหัส 5 แนวคิดหลัก · Core Decoder</div>
+  <table class="decoder">
+    <thead>
+      <tr>
+        <th style="width:15%">แนวคิด (EN)</th>
+        <th style="width:22%">คำไทยที่พบ</th>
+        <th style="width:33%">ความหมายจริง — กฎการกระจาย</th>
+        <th style="width:30%">บททดสอบเร็ว (ถามกับเอกสาร)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-problem">
+        <td><span class="code">INEQUALITY</span></td>
+        <td><span class="th-term">ความเหลื่อมล้ำ</span> <span class="chip s">🔒 นิ่ง</span></td>
+        <td class="rule-cell"><b>สภาพ “ไม่เท่ากัน”</b> = ตัวปัญหา (ที่อีก 4 แนวคิดเป็นคำตอบ) มี 4 มิติ: การเข้าถึง · ทรัพยากร · กระบวนการ · ผลลัพธ์ <span class="th-alt">(พ.ร.บ.กสศ. ม.3 นิยาม = “ความไม่เท่าเทียมกัน” จาก 3 ต้นตอ: โรงเรียน–ครู–ฐานะ)</span></td>
+        <td class="test">“เอกสารพูดถึง <span class="q">ช่องว่าง</span> ใน <span class="arrow">มิติไหน</span>?” <br>ระวัง: วัดแค่การเข้าถึง จะไม่เห็นช่องว่างเชิงผลลัพธ์</td>
+      </tr>
+      <tr>
+        <td><span class="code">EQUALITY</span></td>
+        <td><span class="th-term">ความเท่าเทียม</span> <span class="chip w">⚠ ลื่น</span><br><span class="th-alt">/ ความเสมอภาค</span></td>
+        <td class="rule-cell"><b>ให้ทุกคน “สิ่งเดียวกัน ปริมาณเท่ากัน”</b> (เชิงรูปแบบ / formal) <span class="th-alt">— จำเป็นแต่ไม่พอ: เมื่อจุดตั้งต้นต่างกันมาก การให้เท่ากันกลับตอกย้ำความเหลื่อมล้ำ</span></td>
+        <td class="test">“ให้ <span class="arrow">เหมือนกันหมด</span> ทุกคนหรือเปล่า?” <br>ถ้าใช่ <span class="arrow">→</span> Equality</td>
+      </tr>
+      <tr>
+        <td><span class="code">EQUITY</span></td>
+        <td><span class="th-term">ความเป็นธรรม</span> <span class="chip s">🔒 นิ่ง*</span><br><span class="th-alt">/ ความเสมอภาค / ความเท่าเทียม <span class="chip w" style="margin:0">⚠</span></span></td>
+        <td class="rule-cell"><b>ให้ “ตามความจำเป็นที่ต่างกัน”</b> เพื่อให้ผลลัพธ์ใกล้เคียงกัน (เชิงสาระ / substantive) <span class="th-alt">(รธน. ม.71: จัดสรรงบตามความจำเป็นที่ต่างกัน “เพื่อความเป็นธรรม”; ม.27/4: ช่วยผู้ด้อยโอกาส ≠ เลือกปฏิบัติ)</span></td>
+        <td class="test">“ให้ <span class="arrow">ผู้ด้อยโอกาสมากกว่า</span> หรือเปล่า?” <br>ถ้าใช่ <span class="arrow">→</span> Equity</td>
+      </tr>
+      <tr>
+        <td><span class="code">JUSTICE</span></td>
+        <td><span class="th-term">ความยุติธรรม<br>ทางการศึกษา</span> <span class="chip s">🔒 นิ่ง</span></td>
+        <td class="rule-cell"><b>แก้ “โครงสร้างที่ผลิตซ้ำ” ความเหลื่อมล้ำ</b> ไม่ใช่ชดเชยปลายทาง <span class="th-alt">(ปฏิรูปการจัดสรร · กระจายครูคุณภาพ · รื้อโครงสร้างกีดกัน)</span></td>
+        <td class="test">“พูดถึงการ <span class="arrow">รื้อ/ปฏิรูปโครงสร้าง</span> ไม่ใช่แค่ให้ทุน/ชดเชย?”</td>
+      </tr>
+      <tr>
+        <td><span class="code">INCLUSION</span></td>
+        <td><span class="th-term">การเรียนรวม</span> <span class="chip s">🔒 นิ่ง</span><br><span class="th-alt">/ การอยู่ร่วม</span></td>
+        <td class="rule-cell"><b>ออกแบบระบบ “รองรับความหลากหลายตั้งแต่ต้น”</b> (universal design) ไม่ใช่แยกกลุ่ม <span class="th-alt">(เด็กพิการเรียนร่วม · ชาติพันธุ์/ไร้สัญชาติ · พหุภาษา)</span></td>
+        <td class="test">“ระบบ <span class="arrow">ออกแบบเผื่อคนหลากหลาย</span> ไหม หรือทิ้งใครไว้?”</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SPOTLIGHT: THE TRAP -->
+  <div class="seclabel">จุดกับดัก · หลักฐานจากเอกสารจริง 3 ฉบับ</div>
+  <div class="spot">
+    <div class="spot-head"><span>⚠</span> <span class="big">เสมอภาค</span> &amp; <span class="big">เท่าเทียม</span> — แปลได้ทั้ง Equality และ Equity · ต้องตรวจทุกครั้ง</div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="src">รัฐธรรมนูญ 2560<span class="mono">มาตรา 27</span></td>
+          <td>ใช้ <span class="quo">“เสมอกัน…เท่าเทียมกัน”</span> เป็น <b>คำพ้อง</b> ในประโยคเดียว</td>
+          <td class="verdict v-eq">เสมอภาค = เท่าเทียม = EQUALITY</td>
+        </tr>
+        <tr>
+          <td class="src">พ.ร.บ. กสศ. 2561<span class="mono">ชื่อกองทุน</span></td>
+          <td>ชื่ออังกฤษทางการ <span class="quo">“Equitable Education Fund”</span></td>
+          <td class="verdict v-eqty">เสมอภาค = EQUITY</td>
+        </tr>
+        <tr>
+          <td class="src">แผนการศึกษาแห่งชาติ<span class="mono">2560–2579</span></td>
+          <td>หัวข้อ <span class="quo">“ความเท่าเทียม (Equity)”</span> แต่ตัวชี้วัดใต้เป้าใช้ <span class="quo">“ดัชนีความเสมอภาค”</span> — ปนกันในเอกสารเดียว</td>
+          <td class="verdict v-eqty">เท่าเทียม = EQUITY</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <div class="rulebox">
+      <h3>วิธีถอดรหัส 3 ขั้น · เมื่อเจอ “เสมอภาค/เท่าเทียม”</h3>
+      <div class="step"><span class="n">1</span><div><b>หาคำอังกฤษในวงเล็บก่อน</b> — เชื่อถือได้ที่สุด ถ้ามี (Equality) หรือ (Equity) กำกับ ให้ยึดตามนั้น</div></div>
+      <div class="step"><span class="n">2</span><div><b>ไม่มีวงเล็บ? อ่านนิยาม/ตัวชี้วัด</b> — “เท่ากันทุกคน/ถ้วนหน้า” <span class="eq-tag tag-eq">→ Equality</span> · “ตามความจำเป็น / ช่วยผู้ขาดแคลน–ด้อยโอกาส” <span class="eq-tag tag-eqty">→ Equity</span></div></div>
+      <div class="step"><span class="n">3</span><div><b>ยังไม่ชัด? ดูบริบท/สังกัด</b> — ตัวบทสิทธิ–กฎหมาย มักหมายถึง <span class="eq-tag tag-eq">Equality</span> · บริบทงบประมาณ–การช่วยเหลือ มักหมายถึง <span class="eq-tag tag-eqty">Equity</span></div></div>
+    </div>
+    <div class="safebox">
+      <h3>คำที่ใช้ได้อย่างมั่นใจ 🔒</h3>
+      <div class="safe-item"><span class="kw">ความเหลื่อมล้ำ</span> <span class="mono">= Inequality</span><br>ไม่กำกวม = “ตัวปัญหา/ช่องว่าง”</div>
+      <div class="safe-item"><span class="kw">ความเป็นธรรม</span> <span class="mono">= Equity</span><br>คำไทยที่ชัดที่สุดสำหรับ “ให้ตามจำเป็น” (อิงถ้อยคำรัฐธรรมนูญ ม.71)</div>
+      <div class="safe-item" style="font-size:9px;color:var(--ink-faint)">* ควรสงวน “เสมอภาค/เท่าเทียม” ไว้ใช้กับ Equality หรือใช้เมื่อมีคำอังกฤษกำกับเท่านั้น</div>
+    </div>
+  </div>
+
+  <div class="colophon">
+    <span>Equity Terminology Decoder · v1.0</span>
+    <span>อ้างอิง: รัฐธรรมนูญ 2560 · พ.ร.บ.กสศ. 2561 · แผนการศึกษาแห่งชาติ 2560–2579</span>
+  </div>
+
+</div>
+</body>
+</html>
