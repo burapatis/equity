@@ -39,6 +39,12 @@ equity-education-site/
 
 > หมายเหตุ: ลิงก์ "รัฐธรรมนูญ 2560" ชี้ไปยังราชกิจจานุเบกษาโดยตรง (ไม่ได้ฝังไฟล์ในเว็บ เพื่อให้แพ็กเกจเบา) — https://www.ratchakitcha.soc.go.th/DATA/PDF/2560/A/040/1.PDF
 
+## SEO (ค้นเจอใน Google)
+
+- `sitemap.xml` + `robots.txt` อยู่ที่ root ของเว็บ (โดเมน equity.thamdee.com)
+- ทุกหน้ามี `<link rel="canonical">` + Open Graph/Twitter Card + รูปแชร์ `assets/img/og-cover.png` (1200×630)
+- หลังอัปโหลด: สมัคร Google Search Console → เมนู Sitemaps → ใส่ `sitemap.xml` → Submit
+
 ## การนำไปใช้งาน (Hosting)
 
 เป็นเว็บ static ล้วน ไม่ต้องมี backend เปิดใช้ได้ทันทีหลายวิธี:
