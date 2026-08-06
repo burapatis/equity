@@ -1,0 +1,8 @@
+# robots.txt — ความเป็นธรรมทางการศึกษา (Educational Equity Thailand)
+# อนุญาตให้ search engine ทุกตัวเก็บข้อมูลได้ทั้งเว็บ
+
+User-agent: *
+Allow: /
+
+# แผนผังเว็บ — โปรดแทน "equity.thamdee.com" ด้วยโดเมนจริงของคุณ
+Sitemap: https://equity.thamdee.com/sitemap.xml
