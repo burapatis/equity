@@ -28,6 +28,7 @@ equity-education-site/
 
 หน้า "แนวคิด & ศัพท์" มีส่วน **"สื่อเผยแพร่ (ดาวน์โหลด)"** (ลิงก์จาก footer ทุกหน้า → `concepts.html#downloads`):
 - **ตารางถอดรหัสศัพท์** — PDF (พิมพ์ A4) · HTML
+- **กรอบเทียบคำศัพท์ ไทย–อังกฤษ–สากล** (Bilingual Concordance) — PDF · HTML
 - **แผนภาพ 4 แนวคิด** (Equality/Equity/Justice/Inclusion) — PNG (สไลด์) · PDF · HTML
 
 ## เอกสารต้นฉบับที่ฝังในเว็บ (assets/docs/)

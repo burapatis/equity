@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>กรอบเทียบคำศัพท์ไทย–อังกฤษ–สากล · Bilingual Terminology Concordance</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600;700&family=Sarabun:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fff; --ink:#14243f; --ink-soft:#44506a; --ink-faint:#828a9a;
+    --rule:#dcdfd7; --rule-soft:#e8eae3;
+    --ineq:#a63a2e; --ineq-bg:#f6e6e2; --eqal:#5c6b82; --eqal-bg:#e9ebef;
+    --eqty:#0e7361; --eqty-bg:#e0efea; --just:#b07d1f; --just-bg:#f6ecd9; --incl:#6a57a6; --incl-bg:#ece7f5;
+    --gold:#8a6d1c;
+    --serif:"Noto Serif Thai",serif; --sans:"Sarabun",sans-serif; --mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);color:var(--ink);font-size:11px;line-height:1.5;-webkit-font-smoothing:antialiased;background:#eef0ea;padding:20px}
+  .sheet{width:297mm;min-height:210mm;margin:0 auto 16px;background:#fff;padding:14mm 15mm 12mm;box-shadow:0 2px 18px rgba(20,36,63,.12)}
+  .eyebrow{font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h1{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.15;margin-top:3px}
+  h1 .en{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--ink-soft);letter-spacing:.02em}
+  .masthead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid var(--ink);padding-bottom:9px}
+  .masthead .who{text-align:right;font-family:var(--mono);font-size:8px;color:var(--ink-faint);line-height:1.6;letter-spacing:.02em}
+  .sub{font-size:11px;color:var(--ink-soft);margin-top:9px;max-width:120ch}
+  .spectrum{display:flex;height:5px;width:100%;border-radius:3px;overflow:hidden;margin-top:10px}
+  .spectrum i{flex:1}.s1{background:var(--ineq)}.s2{background:var(--eqal)}.s3{background:var(--eqty)}.s4{background:var(--just)}.s5{background:var(--incl)}
+  .seclabel{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin:18px 0 7px;display:flex;align-items:center;gap:9px}
+  .seclabel::after{content:"";flex:1;height:1px;background:var(--rule)}
+  table{width:100%;border-collapse:collapse}
+  th{font-family:var(--mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;text-align:left;padding:0 8px 5px;border-bottom:1.5px solid var(--ink)}
+  td{padding:8px 8px;border-bottom:1px solid var(--rule-soft);vertical-align:top;font-size:10.5px;color:var(--ink-soft)}
+  tr:last-child td{border-bottom:none}
+  .term{font-family:var(--serif);font-size:13px;font-weight:600;color:var(--ink);line-height:1.25}
+  .en-lbl{font-family:var(--mono);font-size:8.5px;color:var(--ink-faint);display:block}
+  .chip{display:inline-block;font-family:var(--mono);font-size:8.5px;font-weight:600;padding:1px 6px;border-radius:3px;letter-spacing:.02em}
+  .c-ineq{background:var(--ineq-bg);color:var(--ineq)}.c-eqal{background:var(--eqal-bg);color:var(--eqal)}
+  .c-eqty{background:var(--eqty-bg);color:var(--eqty)}.c-just{background:var(--just-bg);color:var(--just)}.c-incl{background:var(--incl-bg);color:var(--incl)}
+  .rec{font-weight:600;color:var(--ink)}
+  .row-ineq td:first-child{box-shadow:inset 3px 0 var(--ineq)} .row-eqal td:first-child{box-shadow:inset 3px 0 var(--eqal)}
+  .row-eqty td:first-child{box-shadow:inset 3px 0 var(--eqty)} .row-just td:first-child{box-shadow:inset 3px 0 var(--just)} .row-incl td:first-child{box-shadow:inset 3px 0 var(--incl)}
+  .callout{border-left:4px solid var(--eqty);background:var(--eqty-bg);padding:11px 15px;border-radius:0 6px 6px 0;margin-top:16px;font-size:11px}
+  .callout b{color:var(--ink)}
+  .status-bad{color:var(--ineq);font-weight:600}.status-gap{color:var(--just);font-weight:600}
+  .foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:9px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:8px;color:var(--ink-faint);letter-spacing:.02em}
+  .quo{font-style:italic}
+  @page{size:A4 landscape;margin:0}
+  @media print{body{padding:0;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet{box-shadow:none;margin:0;width:297mm;min-height:210mm;padding:12mm 13mm}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="masthead">
+    <div>
+      <div class="eyebrow">Reference · เอกสารประกอบ equity.thamdee.com</div>
+      <h1>กรอบเทียบคำศัพท์ความเสมอภาคทางการศึกษา<br><span class="en">Bilingual Terminology Concordance · TH–EN–International</span></h1>
+    </div>
+    <div class="who">อ้างอิงตัวบทแปลทางการ<br>รัฐธรรมนูญ 2560 · พ.ร.บ.กศ. 2542 · พ.ร.บ.กสศ. 2561<br>ตรวจนับจากตัวบทจริง</div>
+  </div>
+  <p class="sub">เทียบ <b>คำไทยในตัวบท</b> · <b>คำแปลอังกฤษที่ปรากฏจริง</b>ในกฎหมายสามฉบับ · <b>ศัพท์มาตรฐานสากล</b> (UNESCO/OECD/SDG4/World Bank) และ <b>คำแปลที่เสนอให้ใช้สอดคล้องทั้งระบบ</b> — ยึดกฎการกระจายทรัพยากร ไม่ใช่ตัวคำ</p>
+  <div class="spectrum"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div>
+
+  <div class="seclabel">1 · กรอบเทียบสามภาษา · Three-Language Comparison</div>
+  <table>
+    <thead><tr><th style="width:15%">คำไทย / แนวคิด</th><th style="width:26%">อังกฤษที่ปรากฏในตัวบทไทย (จริง)</th><th style="width:24%">ศัพท์มาตรฐานสากล</th><th style="width:20%">คำแปลที่เสนอให้ใช้ทั้งระบบ</th></tr></thead>
+    <tbody>
+      <tr class="row-ineq"><td><span class="term">ความเหลื่อมล้ำ</span><span class="en-lbl">INEQUALITY</span></td><td>รธน. <span class="quo">disparity</span> · กสศ. <span class="quo">inequality</span> · (พ.ร.บ.กศ. ไม่ปรากฏ)</td><td>SDG4.5 disparities · UNESCO/WB inequality/inequity · OECD inequity</td><td><span class="chip c-ineq">educational inequality</span> <span class="rec">— วงเล็บ disparity เมื่ออ้างรัฐธรรมนูญ</span></td></tr>
+      <tr class="row-eqty"><td><span class="term">ความเสมอภาค</span><span class="en-lbl">EQUITY</span></td><td>กสศ. <span class="quo">equitable/equity</span> · รธน.&พ.ร.บ.กศ. <span class="quo">equal/equality of educational opportunity</span></td><td>OECD/UNESCO equity · SDG4 equitable</td><td><span class="chip c-eqty">equity / equitable</span> <span class="rec">— ไม่ปนกับ equality</span></td></tr>
+      <tr class="row-eqal"><td><span class="term">ความเท่าเทียม</span><span class="en-lbl">EQUALITY</span></td><td><span class="quo">equal/equally</span> (ปนกับเสมอภาค) · กสศ. รูปปฏิเสธ <span class="quo">unequal</span></td><td>equality · equal access / equal opportunity</td><td><span class="chip c-eqal">equality / equal</span> <span class="rec">— สงวนต่างจาก equity</span></td></tr>
+      <tr class="row-just"><td><span class="term">ความเป็นธรรม</span><span class="en-lbl">FAIRNESS / JUSTICE</span></td><td>รธน. <span class="quo">fairness/justice</span> · พ.ร.บ.กศ. <span class="quo">justice</span> · กสศ. ไม่ปรากฏ</td><td>OECD fairness (1 ใน 2 เสาของ equity) · HRBA/UNESCO justice / right to education</td><td><span class="chip c-just">fairness + justice</span> <span class="rec">— ควรเติมในบริบท กสศ.</span></td></tr>
+      <tr class="row-incl"><td><span class="term">การเรียนรวม</span><span class="en-lbl">INCLUSION</span></td><td>ไม่ปรากฏในสามฉบับ (พ.ร.บ.กศ. ใช้ <span class="quo">special education</span>)</td><td>SDG4 inclusive · UNESCO/OECD inclusion (เสาที่ 2 ของ equity)</td><td><span class="chip c-incl">inclusion / inclusive</span> <span class="rec">— แยกจากกฎหมายการศึกษาคนพิการ</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout"><b>ข้อค้นพบชี้ขาด:</b> OECD นิยาม <b>equity = fairness + inclusion</b> สองคำไทยที่ <b>หายไปจาก พ.ร.บ.กสศ.</b> พอดีคือ <b>“ความเป็นธรรม” (fairness)</b> และ <b>“การเรียนรวม” (inclusion)</b> — ซึ่งเป็น <i>สองเสาหลัก</i> ของนิยาม equity ตาม OECD กสศ. จึงประกาศเป้าหมาย equity แต่ตัวบทขาดองค์ประกอบครบทั้งสองเสา · หัวข้อทางการ SDG4 = <span class="quo">“inclusive and equitable quality education”</span> วางคู่ inclusive + equitable</div>
+
+  <div class="seclabel">2 · ช่องว่างการแปลข้ามสามฉบับ · Harmonization Gap</div>
+  <table>
+    <thead><tr><th style="width:16%">คำไทย</th><th style="width:20%">รัฐธรรมนูญ 2560</th><th style="width:22%">พ.ร.บ.การศึกษาแห่งชาติ 2542</th><th style="width:18%">พ.ร.บ.กสศ. 2561</th><th style="width:24%">สถานะความสอดคล้อง</th></tr></thead>
+    <tbody>
+      <tr><td class="term">ความเหลื่อมล้ำ</td><td>educational disparity</td><td>— (ไม่ใช้)</td><td>educational inequality</td><td class="status-bad">ไม่สอดคล้อง: 2 คำต่างกันสำหรับวลีไทยเดียวกัน</td></tr>
+      <tr><td class="term">ความเสมอภาค</td><td>equal / equality</td><td>equality of educational opportunity</td><td>equitable / equity</td><td class="status-bad">ไม่สอดคล้อง: equity vs equality ปะปนกัน</td></tr>
+      <tr><td class="term">ความเป็นธรรม</td><td>fairness / justice</td><td>justice</td><td>— (ไม่ปรากฏ)</td><td class="status-gap">ช่องว่าง: หายไปจาก กสศ.</td></tr>
+      <tr><td class="term">การเรียนรวม</td><td>— (ไม่ปรากฏ)</td><td>special education (มิใช่ inclusion)</td><td>— (ไม่ปรากฏ)</td><td class="status-gap">ช่องว่าง: ไม่มีคำ inclusion ในทั้งสามฉบับ</td></tr>
+    </tbody>
+  </table>
+
+  <div class="foot">
+    <span>Bilingual Terminology Concordance · v1.0 · Boorapatis Ploysuwan (ผู้วิจัยอิสระ)</span>
+    <span>equity.thamdee.com · คู่กับ “ตารางถอดรหัสศัพท์” และรายงานฉบับเต็ม ภาคผนวก ก</span>
+  </div>
+</div>
+</body>
+</html>
