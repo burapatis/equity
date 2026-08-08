@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 690" font-family="'Sarabun','Tahoma',sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#828a9a"/>
+    </marker>
+    <marker id="ahg" markerWidth="12" markerHeight="12" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#a63a2e"/>
+    </marker>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600;700&amp;family=Sarabun:wght@400;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap');</style>
+  </defs>
+  <rect width="1360" height="690" fill="#f4f5f1"/>
+  <text x="40" y="52" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="30" fill="#14243f">ระบบนิเวศความเสมอภาคทางการศึกษา</text>
+  <text x="40" y="76" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="500" font-size="13" letter-spacing="1.5" fill="#44506a">EDUCATIONAL EQUITY ECOSYSTEM · จากหลักการ สู่การปฏิบัติ สู่การลดความเหลื่อมล้ำ</text>
+  <g>
+    <rect x="40"  y="90" width="256" height="6" rx="3" fill="#a63a2e"/>
+    <rect x="296" y="90" width="256" height="6" fill="#5c6b82"/>
+    <rect x="552" y="90" width="256" height="6" fill="#0e7361"/>
+    <rect x="808" y="90" width="256" height="6" fill="#b07d1f"/>
+    <rect x="1064" y="90" width="256" height="6" rx="3" fill="#6a57a6"/>
+  </g>
+  <g>
+    <rect x="40" y="118" width="1280" height="82" rx="10" fill="#14243f"/>
+    <text x="62" y="146" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="2" fill="#7fc3b6">ชั้นที่ 1 · รากฐาน · FOUNDATIONS</text>
+    <text x="62" y="172" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="15" fill="#ffffff">ศักดิ์ศรีความเป็นมนุษย์ · สิทธิมนุษยชน · ความยุติธรรมทางสังคม · ความเสมอภาคเบื้องหน้ากฎหมาย · การไม่เลือกปฏิบัติ</text>
+    <text x="62" y="191" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="11.5" fill="#9fb4c9">ฐานกฎหมาย/ตราสาร: รัฐธรรมนูญ 2560 ม.4, 27, 54 · UDHR (1948) · ICESCR (1966) · CRC (1989)</text>
+  </g>
+  <line x1="680" y1="204" x2="680" y2="230" stroke="#828a9a" stroke-width="2.4" marker-end="url(#ah)"/>
+  <g>
+    <rect x="40" y="246" width="219" height="132" rx="10" fill="#ffffff" stroke="#dcdfd7" stroke-width="1.5"/>
+    <rect x="40" y="246" width="219" height="5" rx="2.5" fill="#b07d1f"/>
+    <text x="149.5" y="288" text-anchor="middle" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="21" fill="#14243f">ความยุติธรรม</text>
+    <text x="149.5" y="308" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="1" fill="#b07d1f">JUSTICE</text>
+    <text x="149.5" y="338" text-anchor="middle" font-family="'Sarabun','Tahoma',sans-serif" font-size="13" fill="#44506a">สิทธิ + โครงสร้างที่เป็นธรรม</text>
+  </g><line x1="265" y1="312.0" x2="296" y2="312.0" stroke="#828a9a" stroke-width="2.4" marker-end="url(#ah)"/>
+  <g>
+    <rect x="305" y="246" width="219" height="132" rx="10" fill="#ffffff" stroke="#dcdfd7" stroke-width="1.5"/>
+    <rect x="305" y="246" width="219" height="5" rx="2.5" fill="#0e7361"/>
+    <text x="414.5" y="288" text-anchor="middle" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="21" fill="#14243f">ความเป็นธรรม</text>
+    <text x="414.5" y="308" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="1" fill="#0e7361">EQUITY</text>
+    <text x="414.5" y="338" text-anchor="middle" font-family="'Sarabun','Tahoma',sans-serif" font-size="13" fill="#44506a">ให้ตามความจำเป็น</text>
+  </g><line x1="530" y1="312.0" x2="561" y2="312.0" stroke="#828a9a" stroke-width="2.4" marker-end="url(#ah)"/>
+  <g>
+    <rect x="570" y="246" width="219" height="132" rx="10" fill="#ffffff" stroke="#dcdfd7" stroke-width="1.5"/>
+    <rect x="570" y="246" width="219" height="5" rx="2.5" fill="#6a57a6"/>
+    <text x="679.5" y="288" text-anchor="middle" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="21" fill="#14243f">การเรียนรวม</text>
+    <text x="679.5" y="308" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="1" fill="#6a57a6">INCLUSION</text>
+    <text x="679.5" y="338" text-anchor="middle" font-family="'Sarabun','Tahoma',sans-serif" font-size="13" fill="#44506a">โอบรับทุกคน อยู่ร่วมกัน</text>
+  </g><line x1="795" y1="312.0" x2="826" y2="312.0" stroke="#828a9a" stroke-width="2.4" marker-end="url(#ah)"/>
+  <g>
+    <rect x="835" y="246" width="219" height="132" rx="10" fill="#ffffff" stroke="#dcdfd7" stroke-width="1.5"/>
+    <rect x="835" y="246" width="219" height="5" rx="2.5" fill="#5c6b82"/>
+    <text x="944.5" y="288" text-anchor="middle" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="21" fill="#14243f">ความเท่าเทียม</text>
+    <text x="944.5" y="308" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="1" fill="#5c6b82">EQUALITY</text>
+    <text x="944.5" y="338" text-anchor="middle" font-family="'Sarabun','Tahoma',sans-serif" font-size="13" fill="#44506a">โอกาสที่เท่ากัน</text>
+  </g><line x1="1060" y1="312.0" x2="1089" y2="312.0" stroke="#a63a2e" stroke-width="3" marker-end="url(#ahg)"/>
+  <g>
+    <rect x="1100" y="246" width="219" height="132" rx="10" fill="#f6e6e2" stroke="#a63a2e" stroke-width="1.8"/>
+    <rect x="1100" y="246" width="219" height="5" rx="2.5" fill="#a63a2e"/>
+    <text x="1209.5" y="286" text-anchor="middle" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="19" fill="#a63a2e">ลดความเหลื่อมล้ำ</text>
+    <text x="1209.5" y="306" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="10.5" letter-spacing="0.5" fill="#a63a2e">REDUCE INEQUALITY</text>
+    <text x="1209.5" y="336" text-anchor="middle" font-family="'Sarabun','Tahoma',sans-serif" font-size="13" fill="#44506a">ผลลัพธ์ที่ยั่งยืน (SDG 10)</text>
+  </g><text x="40" y="234" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="2" fill="#828a9a">ชั้นที่ 2 · หลักปฏิบัติ  →  ชั้นที่ 3 · ผลลัพธ์</text>
+  <g>
+    <rect x="40" y="402" width="1280" height="150" rx="10" fill="#14243f"/>
+    <text x="62" y="432" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="11" letter-spacing="2" fill="#7fc3b6">กลไกขับเคลื่อน · วงจรพัฒนาต่อเนื่อง (PDCA)</text>
+  </g>
+  <g>
+    <rect x="62" y="450" width="228" height="58" rx="9" fill="#ffffff" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="0.06"/>
+    <rect x="62" y="450" width="228" height="58" rx="9" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="78" y="484" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="22" fill="#7fc3b6">1</text>
+    <text x="102" y="477" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="13.5" fill="#ffffff">ศึกษาข้อมูล/บริบท</text>
+    <text x="102" y="494" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="9.5" fill="#9fb4c9">Evidence</text>
+  </g><line x1="291" y1="479.0" x2="301" y2="479.0" stroke="#7f8ba1" stroke-width="2" marker-end="url(#ah)"/>
+  <g>
+    <rect x="305" y="450" width="228" height="58" rx="9" fill="#ffffff" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="0.06"/>
+    <rect x="305" y="450" width="228" height="58" rx="9" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="321" y="484" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="22" fill="#7fc3b6">2</text>
+    <text x="345" y="477" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="13.5" fill="#ffffff">เป้าหมาย/กลยุทธ์</text>
+    <text x="345" y="494" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="9.5" fill="#9fb4c9">Strategy</text>
+  </g><line x1="534" y1="479.0" x2="544" y2="479.0" stroke="#7f8ba1" stroke-width="2" marker-end="url(#ah)"/>
+  <g>
+    <rect x="548" y="450" width="228" height="58" rx="9" fill="#ffffff" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="0.06"/>
+    <rect x="548" y="450" width="228" height="58" rx="9" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="564" y="484" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="22" fill="#7fc3b6">3</text>
+    <text x="588" y="477" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="13.5" fill="#ffffff">ดำเนินงาน/บูรณาการ</text>
+    <text x="588" y="494" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="9.5" fill="#9fb4c9">Implementation</text>
+  </g><line x1="777" y1="479.0" x2="787" y2="479.0" stroke="#7f8ba1" stroke-width="2" marker-end="url(#ah)"/>
+  <g>
+    <rect x="791" y="450" width="228" height="58" rx="9" fill="#ffffff" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="0.06"/>
+    <rect x="791" y="450" width="228" height="58" rx="9" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="807" y="484" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="22" fill="#7fc3b6">4</text>
+    <text x="831" y="477" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="13.5" fill="#ffffff">ติดตาม/ประเมินผล</text>
+    <text x="831" y="494" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="9.5" fill="#9fb4c9">M&amp;E</text>
+  </g><line x1="1020" y1="479.0" x2="1030" y2="479.0" stroke="#7f8ba1" stroke-width="2" marker-end="url(#ah)"/>
+  <g>
+    <rect x="1034" y="450" width="228" height="58" rx="9" fill="#ffffff" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="0.06"/>
+    <rect x="1034" y="450" width="228" height="58" rx="9" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="1050" y="484" font-family="'Noto Serif Thai','Sarabun','Tahoma',sans-serif" font-weight="700" font-size="22" fill="#7fc3b6">5</text>
+    <text x="1074" y="477" font-family="'Sarabun','Tahoma',sans-serif" font-weight="600" font-size="13.5" fill="#ffffff">เรียนรู้/พัฒนา</text>
+    <text x="1074" y="494" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="9.5" fill="#9fb4c9">Learning</text>
+  </g><text x="680" y="542" text-anchor="middle" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="11.5" letter-spacing="1" fill="#8a6d1c">↻  วนกลับสู่ขั้นที่ 1 — ปรับปรุงอย่างต่อเนื่อง · Leave No One Behind · Do No Harm</text>
+  <line x1="40" y1="586" x2="1320" y2="586" stroke="#dcdfd7" stroke-width="1"/>
+  <text x="40" y="612" font-family="'Sarabun','Tahoma',sans-serif" font-size="12.5" fill="#44506a"><tspan font-weight="700" fill="#14243f">ศัพท์ตามมาตรฐานนี้:</tspan> ความเป็นธรรม = Equity (ให้ตามจำเป็น) · ความเท่าเทียม/เสมอภาค = Equality (โอกาสเท่ากัน) · ความเหลื่อมล้ำ = Inequality</text>
+  <text x="40" y="632" font-family="'IBM Plex Mono','Sarabun',monospace" font-size="11" fill="#828a9a">กรอบแนวคิดเชิงสังเคราะห์ (TEER Hub) เพื่อสื่อสารเชิงวิชาการ · มิใช่ตัวบทกฎหมาย</text>
+  <text x="1320" y="622" text-anchor="end" font-family="'IBM Plex Mono','Sarabun',monospace" font-weight="600" font-size="12" fill="#0e7361">equity.thamdee.com · Boorapatis Ploysuwan</text>
+</svg>
