@@ -11,6 +11,7 @@
   :root{
     --paper:#f4f5f1; --card:#ffffff; --ink:#14243f; --ink-soft:#44506a; --ink-faint:#8a91a1;
     --rule:#d7dad1; --rule-soft:#e7e9e2;
+    --c-ineq:#a63a2e;   --c-ineq-bg:#f6e6e2;
     --c-eqal:#5c6b82;   --c-eqal-bg:#eceef1;
     --c-eqty:#0e7361;   --c-eqty-bg:#e2f0ec;
     --c-just:#b07d1f;   --c-just-bg:#f6eddb;
@@ -40,7 +41,7 @@
   .keyleg .dot{ display:inline-block; width:9px; height:9px; border-radius:50%; margin:0 3px -1px 8px; }
 
   /* panels */
-  .panels{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:20px; }
+  .panels{ display:grid; grid-template-columns:repeat(5,1fr); gap:13px; margin-top:20px; }
   .panel{ border:1px solid var(--rule); border-radius:5px; overflow:hidden; display:flex; flex-direction:column; }
   .p-top{ height:5px; }
   .p-head{ padding:11px 13px 9px; }
@@ -58,6 +59,7 @@
   .ruletag span{ font-size:10px; font-weight:600; padding:3px 9px; border-radius:3px; display:inline-block;
     font-family:"Sarabun"; }
 
+  .ineq .p-num,.ineq .p-en{ color:var(--c-ineq);} .ineq .p-top{background:var(--c-ineq);} .ineq .ruletag span{background:var(--c-ineq-bg);color:var(--c-ineq);}
   .eqal .p-num,.eqal .p-en{ color:var(--c-eqal);} .eqal .p-top{background:var(--c-eqal);} .eqal .ruletag span{background:var(--c-eqal-bg);color:var(--c-eqal);}
   .eqty .p-num,.eqty .p-en{ color:var(--c-eqty);} .eqty .p-top{background:var(--c-eqty);} .eqty .ruletag span{background:var(--c-eqty-bg);color:var(--c-eqty);}
   .just .p-num,.just .p-en{ color:var(--c-just);} .just .p-top{background:var(--c-just);} .just .ruletag span{background:var(--c-just-bg);color:var(--c-just);}
@@ -110,8 +112,8 @@
   <div class="headline-row">
     <div>
       <div class="eyebrow">Concept Visual · แผนภาพประกอบการนำเสนอ</div>
-      <h1>จาก “เท่ากัน” สู่ “เพื่อทุกคน” — 4 แนวคิดความเสมอภาคทางการศึกษา</h1>
-      <div class="sub"><b>ความเท่าเทียม</b> → <b>ความเป็นธรรม</b> → <b>ความยุติธรรม</b> → <b>การเรียนรวม</b> &nbsp;·&nbsp; Equality → Equity → Justice → Inclusion</div>
+      <h1>จาก “เท่ากัน” สู่ “เพื่อทุกคน” — 5 แนวคิดความเสมอภาคทางการศึกษา</h1>
+      <div class="sub"><b>ความเหลื่อมล้ำ</b> → <b>ความเท่าเทียม</b> → <b>ความเป็นธรรม</b> → <b>ความยุติธรรม</b> → <b>การเรียนรวม</b> &nbsp;·&nbsp; Inequality → Equality → Equity → Justice → Inclusion</div>
     </div>
     <div class="keyleg">
       รูปคน = ระดับ “จุดตั้งต้น” ที่ต่างกัน<br>(เช่น ฐานะครอบครัว/โอกาส)<br>
@@ -124,6 +126,35 @@
   </div>
 
   <div class="panels">
+
+    <!-- 0 INEQUALITY -->
+    <div class="panel ineq">
+      <div class="p-top"></div>
+      <div class="p-head"><div class="p-num">00 · จุดตั้งต้น</div>
+        <div class="p-th">ความเหลื่อมล้ำ</div><div class="p-en">INEQUALITY</div></div>
+      <div class="scene">
+        <svg viewBox="0 0 300 210">
+          <circle cx="256" cy="60" r="30" fill="url(#goalGrad)"/>
+          <circle cx="256" cy="60" r="12" fill="var(--goal)"/>
+          <line x1="0" y1="200" x2="300" y2="200" stroke="#c7cabf" stroke-width="2"/>
+          <rect x="0" y="200" width="300" height="10" fill="#eef0ea"/>
+          <!-- wall -->
+          <rect x="206" y="80" width="15" height="120" fill="var(--wall)"/>
+          <rect x="206" y="80" width="15" height="6" fill="var(--wall-dk)"/>
+          <!-- NO boxes: kids on the ground, feet y=200 -->
+          <use href="#kid" x="20"  y="72"  width="60" height="128" style="color:#e08a5b"/>
+          <use href="#kid" x="80"  y="96"  width="60" height="104" style="color:#4b7bab"/>
+          <use href="#kid" x="140" y="130" width="60" height="70"  style="color:#3f9a7a"/>
+          <!-- middle + shortest can't see -->
+          <text x="110" y="92"  font-family="IBM Plex Mono" font-size="15" fill="#c0392b" font-weight="700">✕</text>
+          <text x="170" y="126" font-family="IBM Plex Mono" font-size="15" fill="#c0392b" font-weight="700">✕</text>
+        </svg>
+      </div>
+      <div class="p-body">
+        <div class="cap"><b>จุดตั้งต้นไม่เท่ากัน</b> และยังไม่มีการช่วยเหลือใด ๆ — ช่องว่างของการเข้าถึงและผลลัพธ์ <b>คงอยู่</b></div>
+        <div class="ruletag"><span>โจทย์: ช่องว่างในทุกมิติ</span></div>
+      </div>
+    </div>
 
     <!-- 1 EQUALITY -->
     <div class="panel eqal">
@@ -260,7 +291,7 @@
       <b>หมายเหตุศัพท์ (สำคัญ):</b> รายงานนี้ใช้ <span class="kw">ความเป็นธรรม</span> <span class="mono">= Equity</span> เพราะเป็นคำไทยที่ชัดที่สุด (อิงรัฐธรรมนูญ ม.71 “จัดสรรงบตามความจำเป็นที่ต่างกันเพื่อความเป็นธรรม”) ส่วน “เสมอภาค/เท่าเทียม” ใช้แทน Equality หรือ Equity สลับกันตามแหล่ง จึงควรตรวจคำอังกฤษกำกับเสมอ &nbsp;·&nbsp;
       ในภาพ: <b>กำแพง</b> = อุปสรรคเชิงโครงสร้าง · <b>กล่อง</b> = มาตรการช่วยเหลือ/ชดเชย · <b>เป้าหมาย</b> = การศึกษาที่มีคุณภาพและโอกาส
     </div>
-    <div class="brand">4-Concept Equity Visual · v1.0<br>คู่กับ “ตารางถอดรหัสศัพท์”</div>
+    <div class="brand">5-Concept Equity Visual · v1.1<br>คู่กับ “ตารางถอดรหัสศัพท์”</div>
   </div>
 
 </div>
