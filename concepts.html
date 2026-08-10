@@ -77,7 +77,7 @@
     <div class="decoder mt-l reveal">
       <div class="decoder-tabs" role="tablist">
         <button class="decoder-tab tab-ineq active" data-target="p-ineq" role="tab" aria-selected="true">ความเหลื่อมล้ำ<span class="en">INEQUALITY</span></button>
-        <button class="decoder-tab tab-eqal" data-target="p-eqal" role="tab" aria-selected="false">ความเท่าเทียม<span class="en">EQUALITY</span></button>
+        <button class="decoder-tab tab-eqal" data-target="p-eqal" role="tab" aria-selected="false">ความเท่าเทียม / เสมอภาค<span class="en">EQUALITY</span></button>
         <button class="decoder-tab tab-eqty" data-target="p-eqty" role="tab" aria-selected="false">ความเป็นธรรม<span class="en">EQUITY</span></button>
         <button class="decoder-tab tab-just" data-target="p-just" role="tab" aria-selected="false">ความยุติธรรม<span class="en">JUSTICE</span></button>
         <button class="decoder-tab tab-incl" data-target="p-incl" role="tab" aria-selected="false">การเรียนรวม<span class="en">INCLUSION</span></button>
@@ -93,12 +93,13 @@
       </div>
 
       <div class="decoder-panel" id="p-eqal" role="tabpanel">
-        <div class="dp-th" style="color:var(--c-eqal)">ความเท่าเทียม</div><div class="dp-en" style="color:var(--c-eqal)">EQUALITY · ให้เท่ากัน</div>
+        <div class="dp-th" style="color:var(--c-eqal)">ความเท่าเทียม / ความเสมอภาค</div><div class="dp-en" style="color:var(--c-eqal)">EQUALITY · ให้เท่ากัน</div>
         <div class="dp-grid">
           <div class="dp-cell"><h5>กฎ / สาระ</h5><p>ให้ทุกคน “สิ่งเดียวกัน ปริมาณเท่ากัน” (เชิงรูปแบบ / formal) — จำเป็นแต่ไม่พอ</p></div>
           <div class="dp-cell"><h5>บททดสอบเร็ว</h5><p>“ให้ <b>เหมือนกันหมด</b> ทุกคนหรือเปล่า?” ถ้าใช่ → Equality</p></div>
           <div class="dp-cell"><h5>ข้อควรระวัง</h5><p>เมื่อจุดตั้งต้นต่างกันมาก การให้เท่ากันกลับ <b>ตอกย้ำ</b> ความเหลื่อมล้ำ (เช่น อุดหนุนรายหัวเท่ากัน)</p></div>
         </div>
+        <p class="small muted" style="margin-top:14px"><b>“ความเสมอภาค” อยู่ตรงนี้:</b> โดยรากศัพท์ “ความเสมอภาค” แปลว่า Equality เช่นเดียวกับ “ความเท่าเทียม” (เสมอ+ภาค = ส่วนเท่ากัน) จึงจัดอยู่ในแนวคิดนี้ — แต่ในทางปฏิบัติ “ความเสมอภาค” มักถูกใช้แทน <b>Equity</b> (เช่น ชื่อ “กองทุนเพื่อความเสมอภาคทางการศึกษา” ของ กสศ.) ดังนั้นจึงต้องตัดสินที่ <b>กฎการกระจาย</b> ไม่ใช่ตัวคำ (ดูตารางจุดกับดักด้านล่าง)</p>
       </div>
 
       <div class="decoder-panel" id="p-eqty" role="tabpanel">
@@ -186,7 +187,21 @@
   <div class="wrap">
     <div class="head-block reveal"><span class="eyebrow">แผนภาพ</span><h2>จาก “เท่ากัน” สู่ “เพื่อทุกคน”</h2><p class="lead">อุปมา คน–กล่อง–กำแพง ที่ปรับให้ตรงบริบทการศึกษา และใช้คำถูกต้องตามกรอบนี้</p></div>
 
-    <div class="grid g-4 mt-l">
+    <div class="grid g-5 mt-l">
+      <div class="concept-card c-ineq reveal">
+        <span class="tag">00 · จุดตั้งต้น</span><h3 style="font-size:20px">ความเหลื่อมล้ำ</h3><div class="en">INEQUALITY</div>
+        <svg viewBox="0 0 200 150" style="margin-top:12px" aria-label="จุดตั้งต้นไม่เท่ากัน ไม่มีกล่องช่วย คนกลางและคนเตี้ยมองไม่เห็น">
+          <defs><symbol id="k1" viewBox="0 0 60 160"><circle cx="30" cy="22" r="16"/><rect x="13" y="40" width="34" height="72" rx="15"/><rect x="18" y="106" width="10" height="52" rx="5"/><rect x="32" y="106" width="10" height="52" rx="5"/></symbol></defs>
+          <line x1="0" y1="132" x2="200" y2="132" stroke="#d3d6cc" stroke-width="2"/>
+          <rect x="176" y="60" width="9" height="72" fill="#9aa3b2"/>
+          <use href="#k1" x="14" y="78" width="30" height="54" fill="#e08a5b"/>
+          <use href="#k1" x="58" y="92" width="30" height="40" fill="#4b7bab"/>
+          <use href="#k1" x="104" y="112" width="28" height="20" fill="#3f9a7a"/>
+          <text x="66" y="88" font-family="IBM Plex Mono" font-size="11" fill="#a63a2e" font-weight="700">✕</text>
+          <text x="112" y="106" font-family="IBM Plex Mono" font-size="11" fill="#a63a2e" font-weight="700">✕</text>
+        </svg>
+        <p class="rule" style="font-size:13.5px">จุดตั้งต้นต่างกัน ไม่มีใครได้รับการช่วยเหลือ — ช่องว่างคงอยู่</p>
+      </div>
       <div class="concept-card c-eqal reveal">
         <span class="tag">01</span><h3 style="font-size:20px">ความเท่าเทียม</h3><div class="en">EQUALITY</div>
         <svg viewBox="0 0 200 150" style="margin-top:12px" aria-label="ทุกคนได้กล่องเท่ากัน คนเตี้ยยังไม่ถึง">
