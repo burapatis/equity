@@ -15,20 +15,20 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:var(--sans);color:var(--ink);font-size:11px;line-height:1.5;-webkit-font-smoothing:antialiased;background:#eef0ea;padding:20px}
-  .sheet{width:297mm;min-height:210mm;margin:0 auto 16px;background:#fff;padding:14mm 15mm 12mm;box-shadow:0 2px 18px rgba(20,36,63,.12)}
+  .sheet{width:297mm;min-height:210mm;margin:0 auto 16px;background:#fff;padding:11mm 13mm 9mm;box-shadow:0 2px 18px rgba(20,36,63,.12)}
   .eyebrow{font-family:var(--mono);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
-  h1{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.15;margin-top:3px}
+  h1{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.12;margin-top:2px}
   h1 .en{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--ink-soft);letter-spacing:.02em}
-  .masthead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid var(--ink);padding-bottom:9px}
+  .masthead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid var(--ink);padding-bottom:6px}
   .masthead .who{text-align:right;font-family:var(--mono);font-size:8px;color:var(--ink-faint);line-height:1.6;letter-spacing:.02em}
-  .sub{font-size:11px;color:var(--ink-soft);margin-top:9px;max-width:120ch}
-  .spectrum{display:flex;height:5px;width:100%;border-radius:3px;overflow:hidden;margin-top:10px}
+  .sub{font-size:10.5px;color:var(--ink-soft);margin-top:6px;white-space:nowrap;overflow:hidden}
+  .spectrum{display:flex;height:5px;width:100%;border-radius:3px;overflow:hidden;margin-top:7px}
   .spectrum i{flex:1}.s1{background:var(--ineq)}.s2{background:var(--eqal)}.s3{background:var(--eqty)}.s4{background:var(--just)}.s5{background:var(--incl)}
-  .seclabel{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin:18px 0 7px;display:flex;align-items:center;gap:9px}
+  .seclabel{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin:11px 0 5px;display:flex;align-items:center;gap:9px}
   .seclabel::after{content:"";flex:1;height:1px;background:var(--rule)}
   table{width:100%;border-collapse:collapse}
   th{font-family:var(--mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;text-align:left;padding:0 8px 5px;border-bottom:1.5px solid var(--ink)}
-  td{padding:8px 8px;border-bottom:1px solid var(--rule-soft);vertical-align:top;font-size:10.5px;color:var(--ink-soft)}
+  td{padding:4.5px 8px;border-bottom:1px solid var(--rule-soft);vertical-align:top;font-size:10.5px;color:var(--ink-soft);line-height:1.4}
   tr:last-child td{border-bottom:none}
   .term{font-family:var(--serif);font-size:13px;font-weight:600;color:var(--ink);line-height:1.25}
   .en-lbl{font-family:var(--mono);font-size:8.5px;color:var(--ink-faint);display:block}
@@ -38,13 +38,13 @@
   .rec{font-weight:600;color:var(--ink)}
   .row-ineq td:first-child{box-shadow:inset 3px 0 var(--ineq)} .row-eqal td:first-child{box-shadow:inset 3px 0 var(--eqal)}
   .row-eqty td:first-child{box-shadow:inset 3px 0 var(--eqty)} .row-just td:first-child{box-shadow:inset 3px 0 var(--just)} .row-incl td:first-child{box-shadow:inset 3px 0 var(--incl)}
-  .callout{border-left:4px solid var(--eqty);background:var(--eqty-bg);padding:11px 15px;border-radius:0 6px 6px 0;margin-top:16px;font-size:11px}
+  .callout{border-left:4px solid var(--eqty);background:var(--eqty-bg);padding:9px 14px;border-radius:0 6px 6px 0;margin-top:9px;font-size:10.5px;line-height:1.45}
   .callout b{color:var(--ink)}
   .status-bad{color:var(--ineq);font-weight:600}.status-gap{color:var(--just);font-weight:600}
-  .foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:9px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:8px;color:var(--ink-faint);letter-spacing:.02em}
+  .foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:8px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:8px;color:var(--ink-faint);letter-spacing:.02em}
   .quo{font-style:italic}
   @page{size:A4 landscape;margin:0}
-  @media print{body{padding:0;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet{box-shadow:none;margin:0;width:297mm;min-height:210mm;padding:12mm 13mm}}
+  @media print{body{padding:0;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet{box-shadow:none;margin:0;width:297mm;min-height:210mm;padding:9mm 12mm}}
 </style>
 </head>
 <body>
@@ -56,7 +56,7 @@
     </div>
     <div class="who">อ้างอิงตัวบทแปลทางการ<br>รัฐธรรมนูญ 2560 · พ.ร.บ.กศ. 2542 · พ.ร.บ.กสศ. 2561<br>ตรวจนับจากตัวบทจริง</div>
   </div>
-  <p class="sub">เทียบ <b>คำไทยในตัวบท</b> · <b>คำแปลอังกฤษที่ปรากฏจริง</b>ในกฎหมายสามฉบับ · <b>ศัพท์มาตรฐานสากล</b> (UNESCO/OECD/SDG4/World Bank) และ <b>คำแปลที่เสนอให้ใช้สอดคล้องทั้งระบบ</b> — ยึดกฎการกระจายทรัพยากร ไม่ใช่ตัวคำ</p>
+  <p class="sub">เทียบ <b>คำไทยในตัวบท</b> · <b>คำแปลอังกฤษที่ปรากฏจริง</b> (3 ฉบับ) · <b>ศัพท์มาตรฐานสากล</b> (UNESCO/OECD/SDG4/WB) · <b>คำแปลที่เสนอให้ใช้ทั้งระบบ</b> — ยึดกฎการกระจาย ไม่ใช่ตัวคำ</p>
   <div class="spectrum"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div>
 
   <div class="seclabel">1 · กรอบเทียบสามภาษา · Three-Language Comparison</div>
@@ -79,6 +79,7 @@
     <tbody>
       <tr><td class="term">ความเหลื่อมล้ำ</td><td>educational disparity</td><td>— (ไม่ใช้)</td><td>educational inequality</td><td class="status-bad">ไม่สอดคล้อง: 2 คำต่างกันสำหรับวลีไทยเดียวกัน</td></tr>
       <tr><td class="term">ความเสมอภาค</td><td>equal / equality</td><td>equality of educational opportunity</td><td>equitable / equity</td><td class="status-bad">ไม่สอดคล้อง: equity vs equality ปะปนกัน</td></tr>
+      <tr><td class="term">ความเท่าเทียม</td><td>equal / equally (ปนกับเสมอภาค)</td><td>equal (ปนกับเสมอภาค)</td><td>ปรากฏเป็น unequal</td><td class="status-bad">ไม่สอดคล้อง: ใช้ปนกับ “เสมอภาค” ไม่แยกจาก equity</td></tr>
       <tr><td class="term">ความเป็นธรรม</td><td>fairness / justice</td><td>justice</td><td>— (ไม่ปรากฏ)</td><td class="status-gap">ช่องว่าง: หายไปจาก กสศ.</td></tr>
       <tr><td class="term">การเรียนรวม</td><td>— (ไม่ปรากฏ)</td><td>special education (มิใช่ inclusion)</td><td>— (ไม่ปรากฏ)</td><td class="status-gap">ช่องว่าง: ไม่มีคำ inclusion ในทั้งสามฉบับ</td></tr>
     </tbody>
