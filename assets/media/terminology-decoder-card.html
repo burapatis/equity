@@ -39,7 +39,7 @@
     min-height:297mm;
     margin:0 auto;
     background:var(--card);
-    padding:15mm 14mm 12mm;
+    padding:11mm 13mm 9mm;
     box-shadow:0 2px 24px rgba(20,36,63,.10);
     border:1px solid var(--rule);
   }
@@ -55,11 +55,11 @@
     color:var(--ink-soft); letter-spacing:.02em; }
   .masthead .who{ text-align:right; font-size:8.5px; color:var(--ink-faint); line-height:1.5;
     font-family:"IBM Plex Mono",monospace; letter-spacing:.02em; padding-bottom:2px; }
-  .lede{ font-size:11px; color:var(--ink-soft); margin-top:8px; max-width:62ch; }
+  .lede{ font-size:11px; color:var(--ink-soft); margin-top:6px; max-width:62ch; }
   .lede b{ color:var(--ink); font-weight:600; }
 
   /* ---------- Legend ---------- */
-  .legend{ display:flex; gap:14px; margin-top:11px; }
+  .legend{ display:flex; gap:14px; margin-top:8px; }
   .flag{ display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:600;
     padding:4px 10px; border-radius:2px; }
   .flag .g{ font-family:"IBM Plex Mono",monospace; font-weight:700; }
@@ -78,7 +78,7 @@
   .decoder th{ font-family:"IBM Plex Mono",monospace; font-size:8px; letter-spacing:.08em;
     text-transform:uppercase; color:var(--ink-faint); font-weight:600; text-align:left;
     padding:0 8px 5px; border-bottom:1.5px solid var(--ink); }
-  .decoder td{ padding:8px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top;
+  .decoder td{ padding:4.5px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top;
     font-size:10.5px; color:var(--ink-soft); }
   .decoder tr:last-child td{ border-bottom:none; }
   .code{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:9.5px;
@@ -99,12 +99,12 @@
   .row-problem td{ background:#fafbf7; }
 
   /* ---------- Spotlight (the trap) ---------- */
-  .spot{ margin-top:6px; border:1.5px solid var(--slip-line); border-radius:3px; overflow:hidden; }
+  .spot{ margin-top:4px; border:1.5px solid var(--slip-line); border-radius:3px; overflow:hidden; }
   .spot-head{ background:var(--slip-bg); color:var(--slip); font-weight:700; font-size:10.5px;
     padding:7px 11px; display:flex; align-items:center; gap:8px;
     border-bottom:1px solid var(--slip-line); }
   .spot-head .big{ font-family:"Noto Serif Thai",serif; font-size:13px; }
-  .spot table td{ font-size:10px; padding:7px 11px; border-bottom:1px solid var(--rule-soft);
+  .spot table td{ font-size:10px; padding:4px 11px; border-bottom:1px solid var(--rule-soft);
     color:var(--ink-soft); vertical-align:top; }
   .spot table tr:last-child td{ border-bottom:none; }
   .src{ font-weight:600; color:var(--ink); white-space:nowrap; }
@@ -116,12 +116,12 @@
   .quo{ font-family:"Noto Serif Thai",serif; color:var(--ink); }
 
   /* ---------- Footer: decode rule + safe words ---------- */
-  .foot{ display:grid; grid-template-columns:1.55fr 1fr; gap:14px; margin-top:16px; }
+  .foot{ display:grid; grid-template-columns:1.55fr 1fr; gap:14px; margin-top:9px; }
   .rulebox{ border:1px solid var(--rule); border-radius:3px; padding:10px 12px; }
   .rulebox h3, .safebox h3{ font-family:"IBM Plex Mono",monospace; font-size:8.5px;
     letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); font-weight:600;
     margin-bottom:8px; }
-  .step{ display:flex; gap:9px; margin-bottom:8px; font-size:10px; color:var(--ink-soft); }
+  .step{ display:flex; gap:9px; margin-bottom:5px; font-size:10px; color:var(--ink-soft); }
   .step:last-child{ margin-bottom:0; }
   .step .n{ font-family:"IBM Plex Mono",monospace; font-weight:700; font-size:10px; color:#fff;
     background:var(--ink); width:17px; height:17px; border-radius:50%; flex:none;
@@ -134,13 +134,13 @@
   .safebox{ background:var(--stable-bg); border:1px solid var(--stable-line); border-radius:3px;
     padding:10px 12px; }
   .safebox h3{ color:var(--stable); }
-  .safe-item{ font-size:10px; margin-bottom:8px; color:var(--ink-soft); }
+  .safe-item{ font-size:10px; margin-bottom:5px; color:var(--ink-soft); }
   .safe-item:last-child{ margin-bottom:0; }
   .safe-item .kw{ color:var(--stable); }
   .safe-item .mono{ font-family:"IBM Plex Mono",monospace; font-size:9px; color:var(--stable);
     font-weight:600; }
 
-  .colophon{ margin-top:13px; padding-top:8px; border-top:1px solid var(--rule);
+  .colophon{ margin-top:8px; padding-top:7px; border-top:1px solid var(--rule);
     display:flex; justify-content:space-between; align-items:center;
     font-size:8px; color:var(--ink-faint); font-family:"IBM Plex Mono",monospace;
     letter-spacing:.02em; }
@@ -150,7 +150,7 @@
   @media print{
     body{ padding:0; background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     .sheet{ box-shadow:none; border:none; width:210mm; min-height:297mm; margin:0;
-      padding:13mm 13mm 10mm; }
+      padding:9mm 12mm 8mm; }
   }
 </style>
 </head>
@@ -263,12 +263,13 @@
       <div class="safe-item"><span class="kw">ความเหลื่อมล้ำ</span> <span class="mono">= Inequality</span><br>ไม่กำกวม = “ตัวปัญหา/ช่องว่าง”</div>
       <div class="safe-item"><span class="kw">ความเป็นธรรม</span> <span class="mono">= Equity</span><br>คำไทยที่ชัดที่สุดสำหรับ “ให้ตามจำเป็น” (อิงรัฐธรรมนูญ ม.71 + พ.ร.บ. 2542 ม.60(3))</div>
       <div class="safe-item" style="font-size:9px;color:var(--ink-faint)">* ควรสงวน “เสมอภาค/เท่าเทียม” ไว้ใช้กับ Equality หรือใช้เมื่อมีคำอังกฤษกำกับเท่านั้น</div>
+      <div class="safe-item" style="font-size:9px;color:var(--ink-faint)"><b>พจนานุกรม ราชบัณฑิตฯ 2554:</b> เสมอภาค = เท่าเทียม = เสมอหน้า = ทัดเทียม = <b class="kw">Equality</b> · เหลื่อมล้ำ = “ไม่เท่าเทียม” = Inequality · ยุติธรรม = “เที่ยงธรรม” = Justice (“เป็นธรรม = ถูกต้อง” → ยก = Equity เป็นการบัญญัติเชิงกฎหมาย)</div>
     </div>
   </div>
 
   <div class="colophon">
-    <span>Equity Terminology Decoder · v1.1</span>
-    <span>อ้างอิง: รัฐธรรมนูญ 2560 · พ.ร.บ.การศึกษาแห่งชาติ 2542 · พ.ร.บ.กสศ. 2561 · แผนการศึกษาแห่งชาติ 2560–2579</span>
+    <span>Equity Terminology Decoder · v1.2</span>
+    <span>อ้างอิง: รัฐธรรมนูญ 2560 · พ.ร.บ.การศึกษาแห่งชาติ 2542 · พ.ร.บ.กสศ. 2561 · แผนการศึกษาแห่งชาติ 2560–2579 · พจนานุกรม ราชบัณฑิตยสถาน 2554</span>
   </div>
 
 </div>
